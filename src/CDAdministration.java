@@ -30,7 +30,7 @@ public class CDAdministration {
 			}
 			CD cd = readLine(str);
 
-			 /* add cd to array list */
+			// add cd to array list
 			cds.add(cd);
 		}
 	}
@@ -66,7 +66,7 @@ public class CDAdministration {
 			throw new Exception(CDException);
 		}
 
-		//5 read number of tracks
+		// 5. read number of tracks
 		int tracks;
 		if (sc.hasNextInt()) {
 			tracks = sc.nextInt();
@@ -75,16 +75,16 @@ public class CDAdministration {
 		}
 
 		// 6. minutes and seconds
-		String min_sec;
-		String min;
-		String sec;
+		String minSec;
+		int min;
+		int sec;
 		if (sc.hasNext()) {
-			min_sec = sc.next();
+			minSec = sc.next();
 			// parse num,num
-			Scanner scMS = new Scanner(min_sec);
+			Scanner scMS = new Scanner(minSec);
 			scMS.usedelimiter(",");
 			if (scMS.hasNextInt()) {
-				min = scMS.next();
+				min = scMS.nextInt();
 			} else {
 				throw new Exception(CDException);
 			}
@@ -95,12 +95,20 @@ public class CDAdministration {
 			}
 			if (scMS.hasNext()) {
 				throw new Exception(CDException);
-			} else {
-				throw new Exception(CDException);
 			}
-		return
-	}
-}
+		}
+		// 7. read publisher
+		String publisher;
+		if (sc.hasNext()) {
+			publisher = sc.next();
+		} else {
+			throw new Exception(CDException);
+		}
+		CD disk = new CD(title, author, tracks, minSec, publisher);
+		return disk;
+
+
+
 	
 	/**
 	 * Print een overzicht van alle CD's (maak een toString methode in de klasse CD)

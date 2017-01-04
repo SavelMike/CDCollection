@@ -7,9 +7,18 @@
  */
 public class CD {
 	// TODO: Here comes your implementation
+    private String title;
+    private String author;
+    private int tracks;
+    private String minSec;
+    private  String publisher;
 
 
-    public CD(String ) {
-
+    public CD(String t, String atr, int tr, String msec, String pub) {
+        title = t;
+        author = atr;
+        tracks = tr;
+        minSec = msec;
+        publisher = pub;
     }
 }
