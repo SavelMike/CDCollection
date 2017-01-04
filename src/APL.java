@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 
 /**
  * Application class
@@ -5,7 +6,7 @@
  * @author Evert Duipmans
  */
 public class APL {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		CDAdministration administration = new CDAdministration();
 		
 		try {
