@@ -1,0 +1,10 @@
+# This document contains different CD's. 
+# Each line consists of the following parts (semicolon separated)
+# Title; Artist; Track count; Total length; Publisher
+# incomplete sentences may be ignored. (Use exceptions for that)
+Ghost stories;Coldplay;9;42,37;PLG
+PRISM;Katy Perry;13;48,46;Capitol
+Direct hits;The Killers;15;61,18;Int.Us-Def Jam
+# Here is a line with comments. Please ignore that.
+Listen;David Guetta;14;60,05;Plg France
+GIRL;Pharrell Williams;10;42,26;Columbia

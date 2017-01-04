@@ -1,0 +1,11 @@
+# This document contains different CD's. 
+# Each line consists of the following parts (semicolon separated)
+# Title; Artist; Track count; Total length; Publisher
+# incomplete sentences may be ignored. (Use exceptions for that)
+Born And Raised;John Mayer;12;46,29;Sony
+United We Are;Hardwell;14;Cloud 9 Music
+Four Seasons;Vivaldi;12;60,30;Decca
+# Here is a line with comments. Please ignore that.
+The Script;10;38,30;Sony
+V;Maroon 5;11;40,11;Interscope USA
+Chronic
