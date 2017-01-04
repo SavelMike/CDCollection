@@ -25,7 +25,7 @@ public class CDAdministration {
 		while (sc.hasNextLine()) {
 			String str = sc.nextLine();
 			// if line is a comment, keep run while loop;
-			if (str.length() == 0) && (str.charAt(0) == '#') {
+			if ((str.length() == 0) && (str.charAt(0) == '#')) {
 				continue;
 			}
 			CD cd = readLine(str);
@@ -55,7 +55,7 @@ public class CDAdministration {
 		if (sc.hasNext()) {
 			title = sc.next();
 		} else {
-			throw new Exception(CDException);
+			throw new CDException("Cannot get title");
 		}
 
 		// 4. read author, if can not read author ....
@@ -63,7 +63,7 @@ public class CDAdministration {
 		if (sc.hasNext()) {
 			author = sc.next();
 		} else {
-			throw new Exception(CDException);
+			throw new CDException("Cannot get author");
 		}
 
 		// 5. read number of tracks
@@ -71,30 +71,30 @@ public class CDAdministration {
 		if (sc.hasNextInt()) {
 			tracks = sc.nextInt();
 		} else {
-			throw new Exception(CDException);
+			throw new CDException("Cannot get tracks");
 		}
 
 		// 6. minutes and seconds
 		String minSec;
-		int min;
-		int sec;
+		int min = 0;
+		int sec = 0;
 		if (sc.hasNext()) {
 			minSec = sc.next();
 			// parse num,num
 			Scanner scMS = new Scanner(minSec);
-			scMS.usedelimiter(",");
+			scMS.useDelimiter(",");
 			if (scMS.hasNextInt()) {
 				min = scMS.nextInt();
 			} else {
-				throw new Exception(CDException);
+				throw new CDException("Cannot get minutes");
 			}
 			if (scMS.hasNextInt()) {
 				sec = scMS.nextInt();
 			} else {
-				throw new Exception(CDException);
+				throw new CDException("Cannot get seconds");
 			}
 			if (scMS.hasNext()) {
-				throw new Exception(CDException);
+				throw new CDException("Wrong format");
 			}
 		}
 		// 7. read publisher
@@ -102,10 +102,10 @@ public class CDAdministration {
 		if (sc.hasNext()) {
 			publisher = sc.next();
 		} else {
-			throw new Exception(CDException);
+			throw new CDException("Cannot get publisher");
 		}
-		CD disk = new CD(title, author, tracks, min, sec, publisher);
-		return disk;
+
+		return new CD(title, author, tracks, min, sec, publisher);
 	}
 
 	
