@@ -104,7 +104,7 @@ public class CDAdministration {
 		} else {
 			throw new Exception(CDException);
 		}
-		CD disk = new CD(title, author, tracks, minSec, publisher);
+		CD disk = new CD(title, author, tracks, min, sec, publisher);
 		return disk;
 
 

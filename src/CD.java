@@ -10,15 +10,17 @@ public class CD {
     private String title;
     private String author;
     private int tracks;
-    private String minSec;
+    private int min;
+    private int sec;
     private  String publisher;
 
 
-    public CD(String t, String atr, int tr, String msec, String pub) {
+    public CD(String t, String atr, int tr, int m, int s, String pub) {
         title = t;
         author = atr;
         tracks = tr;
-        minSec = msec;
+        min = m;
+        sec = s;
         publisher = pub;
     }
 }
