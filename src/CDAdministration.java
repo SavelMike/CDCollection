@@ -106,8 +106,7 @@ public class CDAdministration {
 		}
 		CD disk = new CD(title, author, tracks, min, sec, publisher);
 		return disk;
-
-
+	}
 
 	
 	/**

@@ -23,4 +23,12 @@ public class CD {
         sec = s;
         publisher = pub;
     }
+
+    @Override
+    public String toString() {
+        String str = "";
+        str = "title: " + title + ", author: " + author + ", tracks: " + tracks + ", minutes: " + min +
+                ", sec: " + sec + ", publisher: " + publisher;
+        return str;
+    }
 }
